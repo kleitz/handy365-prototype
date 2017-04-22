@@ -1,0 +1,47 @@
+<!--
+  Generated template for the SendReview page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Send your review</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<div class="padding">
+		<h1 class="text-center">
+			How was the tradie?
+		</h1>
+		<p>We want your review to see how everything worked.</p>
+
+		<ion-item>
+		   <ion-label stacked>Comments for the tradie</ion-label>
+		   <ion-textarea></ion-textarea>
+		 </ion-item>
+
+		 <br>
+
+		 <rating [(ngModel)]="rate" 
+        readOnly="false"
+        max="5"
+        emptyStarIconName="star-outline"
+        halfStarIconName="star-half"
+        starIconName="star"
+        nullable="false"
+        (ngModelChange)="onModelChange($event)"></rating>
+
+        <br><br>
+		
+		<div class="padding" style="margin-top:20px;">
+			<button ion-button block (click)="gotofinish()">Continue</button>
+		</div>
+
+	</div>
+		
+</ion-content>

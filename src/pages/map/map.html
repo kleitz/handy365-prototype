@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Accept job?
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content>
+    <div id="map"></div>
+
+	<ion-list>
+		<ion-item>
+		    <h2>John Doe</h2>
+		      <ion-icon name="star" class="yellow"></ion-icon>
+		      <ion-icon name="star" class="yellow"></ion-icon>
+		      <ion-icon name="star" class="yellow"></ion-icon>
+		    <p>Hi, i need to fix my car which stopped working.</p>
+		</ion-item>
+	</ion-list>
+
+	<div padding>
+		<button ion-button color="warning" block (click)="decline()">Decline Job</button>
+		<button ion-button color="primary" block (click)="accept()">Accept Job</button>
+	</div>
+</ion-content>

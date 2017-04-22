@@ -1,0 +1,77 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Signup Handy</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <form (submit)="doSignup()">
+    <ion-list>
+
+      <ion-item>
+        <ion-label floating>First Name</ion-label>
+        <ion-input type="text"  name="name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Last Name</ion-label>
+        <ion-input type="text" name="name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Trade</ion-label>
+          <ion-select>
+            <ion-option value="1">Category 1</ion-option>
+            <ion-option value="2">Category 2</ion-option>
+            <ion-option value="3">Category 3</ion-option>
+            <ion-option value="4">Category 4</ion-option>
+            <ion-option value="5">Category 5</ion-option>
+            <ion-option value="6">Category 6</ion-option>
+            <ion-option value="7">Category 7</ion-option>
+          </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <!-- <ion-label fixed>{{ 'EMAIL' | translate }}</ion-label> -->
+        <ion-label floating>Mobile phone</ion-label>
+        <ion-input type="phone" name="phone"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>ABN</ion-label>
+        <ion-input type="text" name="name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Email</ion-label>
+        <ion-input type="email" name="email"></ion-input>
+      </ion-item>
+
+      
+
+      
+    <!--   First name
+Last name
+Trade (drop down)
+Mobile number
+Skills and prices
+ABN
+license number if applicable
+
+Accept terms and conditions
+ -->
+      <ion-item>
+        <ion-label floating>Password</ion-label>
+        <ion-input type="password" name="password"></ion-input>
+      </ion-item>
+
+      <div padding>
+        <button ion-button color="primary" block (click)="dosignup()">Signup</button>
+      </div>
+
+    </ion-list>
+  </form>
+</ion-content>

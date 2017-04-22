@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Find in {{selectedItem.title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of items" (click)="handyTapped($event, item)">
+      <!-- <button ion-item (click)="openItem(item)"> -->
+        <ion-avatar item-left>
+          <img [src]="item.profilePic" />
+        </ion-avatar>
+        <h2>{{item.name}}</h2>
+          <ion-icon name="star" class="yellow"></ion-icon>
+          <ion-icon name="star" class="yellow"></ion-icon>
+          <ion-icon name="star" class="yellow"></ion-icon>
+        <p>{{item.about}}</p>
+        <!-- <ion-note item-right *ngIf="item.note">{{item.note}}</ion-note> -->
+      <!-- </button> -->
+    </ion-item>
+  </ion-list>
+</ion-content>

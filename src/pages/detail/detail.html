@@ -1,0 +1,173 @@
+<!--
+  Generated template for the Detail page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{selectedItem.name}}</ion-title>
+  </ion-navbar>
+
+
+	<ion-toolbar no-border-top>
+		<ion-segment [(ngModel)]="pet">
+			<ion-segment-button value="puppies">
+			Description
+			</ion-segment-button>
+			<ion-segment-button value="kittens">
+			Prices
+			</ion-segment-button>
+			<ion-segment-button value="ducklings">
+			Reviews
+			</ion-segment-button>
+		</ion-segment>
+	</ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+
+<div [ngSwitch]="pet">
+    <ion-list *ngSwitchCase="'puppies'">
+	      <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + selectedItem.profilePic + ')'">
+	  		</div>
+
+		<ion-list>
+		  <ion-item>
+		    <h1>{{selectedItem.name}}</h1>
+	    	<h2>{{selectedItem.about}}</h2>
+		  </ion-item>
+		  <ion-item text-wrap>
+	    	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente non voluptas inventore veritatis neque facere, adipisci odit necessitatibus sint sunt consequuntur, numquam eveniet provident cumque, dolore placeat nulla aut cupiditate!</p>
+		  </ion-item>
+		</ion-list>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'kittens'">
+    	<ion-list>
+			  <ion-list-header>
+			    Pricing samples
+			  </ion-list-header>
+			  <ion-item>
+			    <h2>Service name</h2>
+		    	<p>Service description</p>
+		    	<h3 item-right>$14</h3>
+			  </ion-item>
+
+			  <ion-item>
+			    <h2>Service name</h2>
+		    	<p>Service description</p>
+		    	<h3 item-right>$20</h3>
+			  </ion-item>
+
+			  <ion-item>
+			    <h2>Service name</h2>
+		    	<p>Service description</p>
+		    	<h3 item-right>$30</h3>
+			  </ion-item>
+
+			  <ion-item>
+			    <h2>Service name</h2>
+		    	<p>Service description</p>
+		    	<h3 item-right>$54</h3>
+			  </ion-item>
+			</ion-list>
+    	</ion-list>
+
+    <ion-list *ngSwitchCase="'ducklings'">
+      <ion-list>
+      	<ion-list-header>
+	      Client reviews
+	    </ion-list-header>
+	    <ion-item text-wrap>
+	        <h2>John P.</h2>
+	        <ion-icon name="star" class="yellow"></ion-icon>
+        	<ion-icon name="star" class="yellow"></ion-icon>
+        	<ion-icon name="star" class="yellow"></ion-icon>
+        	<ion-icon name="star" class="yellow"></ion-icon>
+        	<ion-icon name="star" class="yellow"></ion-icon>
+	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint esse similique assumenda pariatur error eos est aut numquam dicta unde volu.</p>
+	    </ion-item>
+
+	    <ion-item text-wrap>
+	        <h2>Robert P.</h2>
+	        <ion-icon name="star" class="yellow"></ion-icon>
+        	<ion-icon name="star" class="yellow"></ion-icon>
+        	<ion-icon name="star" class="yellow"></ion-icon>
+        	<ion-icon name="star" class="yellow"></ion-icon>
+	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint esse similique assumenda pariatur error eos est aut numquam dicta unde volu.</p>
+	    </ion-item>
+
+	    <ion-item text-wrap>
+	        <h2>John P.</h2>
+	        <ion-icon name="star" class="yellow"></ion-icon>
+        	<ion-icon name="star" class="yellow"></ion-icon>
+        	<ion-icon name="star" class="yellow"></ion-icon>
+        	<ion-icon name="star" class="yellow"></ion-icon>
+        	<ion-icon name="star" class="yellow"></ion-icon>
+	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint esse similique assumenda pariatur error eos est aut numquam dicta unde volu.</p>
+	    </ion-item>
+
+	    <ion-item text-wrap>
+	        <h2>Robert P.</h2>
+	        <ion-icon name="star" class="yellow"></ion-icon>
+        	<ion-icon name="star" class="yellow"></ion-icon>
+        	<ion-icon name="star" class="yellow"></ion-icon>
+	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint esse similique assumenda pariatur error eos est aut numquam dicta unde volu.</p>
+	    </ion-item>
+	  </ion-list>
+    </ion-list>
+	
+	<div padding>
+		<button ion-button block (click)="hire()">Hire {{selectedItem.name}}</button>
+	</div>
+
+
+  </div>
+
+
+
+
+
+
+
+<!-- 
+
+	
+	
+
+	<ion-list>
+	  <ion-list-header>
+	    Pricing samples
+	  </ion-list-header>
+	  <ion-item>
+	    <h2>Service name</h2>
+    	<p>Service description</p>
+    	<h3 item-right>$14</h3>
+	  </ion-item>
+
+	  <ion-item>
+	    <h2>Service name</h2>
+    	<p>Service description</p>
+    	<h3 item-right>$20</h3>
+	  </ion-item>
+
+	  <ion-item>
+	    <h2>Service name</h2>
+    	<p>Service description</p>
+    	<h3 item-right>$30</h3>
+	  </ion-item>
+
+	  <ion-item>
+	    <h2>Service name</h2>
+    	<p>Service description</p>
+    	<h3 item-right>$54</h3>
+	  </ion-item>
+	</ion-list>
+
+	<button ion-button full>Hire {{selectedItem.name}}</button> -->
+
+</ion-content>
